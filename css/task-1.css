@@ -1,0 +1,48 @@
+body {
+  max-width: 1440px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+h2 {
+  color: #2e2f42;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.96px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.item li {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+
+.item ul {
+  gap: 8px;
+}
+
+.item {
+  padding: 16px;
+  border-radius: 8px;
+  background: #f6f6fe;
+  width: 392px;
+  margin-left: auto;
+  margin-right: auto;
+}
