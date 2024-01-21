@@ -1,0 +1,54 @@
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  width: 86px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+
+input {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: transparent;
+  outline-offset: 4px;
+  width: 360px;
+  height: 40px;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+
+input:hover {
+  border: 1px solid #000000;
+}
