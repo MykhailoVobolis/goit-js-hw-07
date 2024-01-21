@@ -1,0 +1,17 @@
+body {
+  max-width: 1440px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+  padding-top: 80px;
+}

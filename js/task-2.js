@@ -41,8 +41,3 @@ const imageItem = images
 console.log(imageItem);
 
 list.insertAdjacentHTML('beforeend', imageItem);
-
-// Inline styles
-
-const imageGallery = document.querySelector('.gallery');
-imageGallery.style.cssText = 'list-style-type: none; display: flex; gap: 24px';
