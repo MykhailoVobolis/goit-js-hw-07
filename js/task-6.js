@@ -15,23 +15,21 @@ btnCreate.addEventListener('click', () => {
       let increaseValue = 30;
       for (let i = 0; i < amount; i++) {
         const item = document.createElement('div');
-        // item.classList.add('boxesitem');
+        item.classList.add('boxesitem');
         item.style.backgroundColor = getRandomHexColor();
         item.style.width = `${increaseValue}px`;
         item.style.height = `${increaseValue}px`;
         colorItemBox.append(item);
         increaseValue += 10;
       }
-      console.log(amount);
     }
     createBoxes(numInput.value);
   }
-
-  console.log(colorItemBox.childNodes);
-
   numInput.value = '';
 });
 
-// btnDestroy.addEventListener('click', event => {
-//   colorItemBox.childNodes.remove();
+// скрипт удаления элементов div / почему то не работает
+// const deletEl = document.querySelectorAll('.boxesitem');
+// btnDestroy.addEventListener('click', () => {
+//   deletEl.remove();
 // });
