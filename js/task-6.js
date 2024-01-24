@@ -20,10 +20,7 @@ function createBoxes(amount) {
 
 // Функція видалення створених елементів <div>
 function deletNewElements() {
-  const deletEl = document.querySelectorAll('.boxes-item');
-  deletEl.forEach(element => {
-    element.remove();
-  });
+  colorItemBox.innerHTML = '';
 }
 
 const numInput = document.querySelector('input');
@@ -39,14 +36,13 @@ btnCreate.addEventListener('click', () => {
     if (colorItemBox.childNodes.length !== 0) {
       deletNewElements();
     }
-    createBoxes();
     createBoxes(numInput.value);
   }
   // Очіщення поля вводу значень
   numInput.value = '';
+});
 
-  // Очіщення результату при кліку на button Destroy
-  btnDestroy.addEventListener('click', () => {
-    deletNewElements();
-  });
+// Очіщення результату при кліку на button Destroy
+btnDestroy.addEventListener('click', () => {
+  deletNewElements();
 });
