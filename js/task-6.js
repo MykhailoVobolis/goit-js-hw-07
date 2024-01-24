@@ -4,32 +4,49 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+//Функція створення нових елементів <div>
+function createBoxes(amount) {
+  let increaseValue = 30;
+  for (let i = 0; i < amount; i++) {
+    const item = document.createElement('div');
+    item.classList.add('boxes-item');
+    item.style.backgroundColor = getRandomHexColor();
+    item.style.width = `${increaseValue}px`;
+    item.style.height = `${increaseValue}px`;
+    colorItemBox.append(item);
+    increaseValue += 10;
+  }
+}
+
+// Функція видалення створених елементів <div>
+function deletNewElements() {
+  const deletEl = document.querySelectorAll('.boxes-item');
+  deletEl.forEach(element => {
+    element.remove();
+  });
+}
+
 const numInput = document.querySelector('input');
 const btnCreate = document.querySelector('[data-create]');
 const btnDestroy = document.querySelector('[data-destroy]');
 const colorItemBox = document.querySelector('#boxes');
 
+// Додавання елементів <div> у контейнер при кліку на button Create
 btnCreate.addEventListener('click', () => {
+  //Первірка валідності введенного значення
   if (numInput.value >= 1 && numInput.value <= 100) {
-    function createBoxes(amount) {
-      let increaseValue = 30;
-      for (let i = 0; i < amount; i++) {
-        const item = document.createElement('div');
-        item.classList.add('boxesitem');
-        item.style.backgroundColor = getRandomHexColor();
-        item.style.width = `${increaseValue}px`;
-        item.style.height = `${increaseValue}px`;
-        colorItemBox.append(item);
-        increaseValue += 10;
-      }
+    // Перевірка наявності елементів у контейнері та, за наявності, їх відалення
+    if (colorItemBox.childNodes.length !== 0) {
+      deletNewElements();
     }
+    createBoxes();
     createBoxes(numInput.value);
   }
+  // Очіщення поля вводу значень
   numInput.value = '';
-});
 
-// скрипт удаления элементов div / почему то не работает
-// const deletEl = document.querySelectorAll('.boxesitem');
-// btnDestroy.addEventListener('click', () => {
-//   deletEl.remove();
-// });
+  // Очіщення результату при кліку на button Destroy
+  btnDestroy.addEventListener('click', () => {
+    deletNewElements();
+  });
+});
