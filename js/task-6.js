@@ -43,6 +43,4 @@ btnCreate.addEventListener('click', () => {
 });
 
 // Очіщення результату при кліку на button Destroy
-btnDestroy.addEventListener('click', () => {
-  deletNewElements();
-});
+btnDestroy.addEventListener('click', deletNewElements);
