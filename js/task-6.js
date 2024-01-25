@@ -6,6 +6,7 @@ function getRandomHexColor() {
 
 //Функція створення нових елементів <div>
 function createBoxes(amount) {
+  let itemArray = [];
   let increaseValue = 30;
   for (let i = 0; i < amount; i++) {
     const item = document.createElement('div');
@@ -13,9 +14,10 @@ function createBoxes(amount) {
     item.style.backgroundColor = getRandomHexColor();
     item.style.width = `${increaseValue}px`;
     item.style.height = `${increaseValue}px`;
-    colorItemBox.append(item);
+    itemArray.push(item);
     increaseValue += 10;
   }
+  colorItemBox.append(...itemArray);
 }
 
 // Функція видалення створених елементів <div>
